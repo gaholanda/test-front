@@ -6,7 +6,7 @@ Fork do repositório [belezanaweb/test-front](https://github.com/belezanaweb/tes
 
 - [Create React App](https://github.com/facebook/create-react-app)
 - [React Router Dom](https://reactrouter.com/web/guides/quick-start)
-- [Card Validator](https://github.com/braintree/card-validator)
+- [Formik](https://formik.org/docs/overview)
 - [axios](https://github.com/axios/axios)
 - [Styled Components](https://github.com/styled-components/styled-components)
 - [Nock](https://github.com/nock/nock)
@@ -44,8 +44,18 @@ yarn
 yarn build
 yarn serve
 ```
+### Épicos e tarefas do projeto (Versão 2)
 
-### Épicos e tarefas do projeto
+- **BNW6 - Layout com CSS Grid**
+  - Rota /cart
+  - Rota /payment
+  - Rota /success
+
+- **BNW7 - Formulário**
+  - Retirar card validator
+  - Recriar com o Formik
+
+### Épicos e tarefas do projeto (Versão 1)
 
 - **BNW1 - Layout das páginas**
   - Estrutura base

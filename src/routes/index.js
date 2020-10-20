@@ -6,20 +6,20 @@ export const routes = [
     id: "cart",
     path: "/cart",
     exact: true,
-    component: lazy(() => import('./Cart'))
+    component: lazy(() => import('./_Cart'))
   },
-  {
-    id: "payment",
-    path: "/payment",
-    exact: true,
-    component: lazy(() => import('./Payment'))
-  },
-  {
-    id: "success",
-    path: "/success",
-    exact: true,
-    component: lazy(() => import('./Success'))
-  }
+  // {
+  //   id: "payment",
+  //   path: "/payment",
+  //   exact: true,
+  //   component: lazy(() => import('./_Payment'))
+  // },
+  // {
+  //   id: "success",
+  //   path: "/success",
+  //   exact: true,
+  //   component: lazy(() => import('./_Success'))
+  // }
 ]
 
 export default routes;

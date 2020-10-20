@@ -1,15 +1,13 @@
-import Context from './Context';
-import CreditCardForm from './CreditCardForm';
-import Menu from './Menu';
-import Products from './Products';
-import PurchaseInfo from './PurchaseInfo';
-import Currency from './Currency';
+import Context from './_Conext';
+import Tabs from './_Tabs';
+import Products from './_Products';
+import Purchase from './_Purchase';
+import Currency from './_Currency';
 
 export {
   Context,
-  CreditCardForm,
-  Menu,
+  Tabs,
   Products,
-  PurchaseInfo,
+  Purchase,
   Currency
 }
