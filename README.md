@@ -55,6 +55,8 @@ yarn serve
   - Retirar card validator
   - Recriar com o Formik
 
+- **BNW8 - Ajustar os testes**
+
 ### Épicos e tarefas do projeto (Versão 1)
 
 - **BNW1 - Layout das páginas**
