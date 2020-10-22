@@ -6,7 +6,7 @@ Fork do repositório [belezanaweb/test-front](https://github.com/belezanaweb/tes
 
 - [Create React App](https://github.com/facebook/create-react-app)
 - [React Router Dom](https://reactrouter.com/web/guides/quick-start)
-- [Formik](https://formik.org/docs/overview)
+- [React Credit Cards](https://github.com/amarofashion/react-credit-cards)
 - [axios](https://github.com/axios/axios)
 - [Styled Components](https://github.com/styled-components/styled-components)
 - [Nock](https://github.com/nock/nock)
@@ -52,8 +52,7 @@ yarn serve
   - Rota /success
 
 - **BNW7 - Formulário**
-  - Retirar card validator
-  - Recriar com o Formik
+  - Nova validação dos campos
 
 - **BNW8 - Ajustar os testes**
 

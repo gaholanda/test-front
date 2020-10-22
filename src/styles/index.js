@@ -9,6 +9,7 @@ import Image from './elements/Image';
 import Loading from './elements/Loading';
 import Box from './elements/Box';
 import ListCSS from './elements/List';
+import FormCSS from './elements/Form';
 
 export {
   GlobalCSS,
@@ -21,5 +22,6 @@ export {
   Image,
   Loading,
   Box,
-  ListCSS
+  ListCSS,
+  FormCSS
 }

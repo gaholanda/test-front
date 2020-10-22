@@ -1,13 +1,9 @@
 import React, { Fragment } from "react";
-import { useHistory } from 'react-router-dom';
 
 import { Products, Purchase } from '../components';
 import { GridItem, Container, Title, Button } from "../styles";
 
 function Cart({ purchase }) {
-
-  const history = useHistory();
-  const goToPayment = () => history.push('/payment');
 
   return (
     <Fragment>
@@ -23,7 +19,7 @@ function Cart({ purchase }) {
         {purchase.products &&
           <Container maxWidth={340}>
             <Purchase info={purchase.info} />
-            <Button data-testid="toPayment" onClick={goToPayment}>Seguir para o pagamento</Button>
+            <Button data-testid="toPayment" to="/payment">Seguir para o pagamento</Button>
           </Container>
         }
       </GridItem>

@@ -2863,13 +2863,6 @@ capture-exit@^2.0.0:
   dependencies:
     rsvp "^4.8.4"
 
-card-validator@^8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/card-validator/-/card-validator-8.1.0.tgz#9f59e039e9a15f66152b228831f3bdcd713f1edf"
-  integrity sha512-KlWjnGs6DyxRj9DLGPv+sb7AvU9Y6Od7DJWjnTghzplzsKz/vTYqRMK46xO/BCpHNqvnFNNVbSQa1vBFJ+/o8g==
-  dependencies:
-    credit-card-type "^9.0.0"
-
 case-sensitive-paths-webpack-plugin@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.3.0.tgz#23ac613cc9a856e4f88ff8bb73bbb5e989825cf7"
@@ -3334,11 +3327,6 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     ripemd160 "^2.0.0"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
-
-credit-card-type@^9.0.0:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/credit-card-type/-/credit-card-type-9.0.1.tgz#b800ae4089ece5e9362626ff1bb44fb3bb8757ed"
-  integrity sha512-GtJr+IyIUN67fRXJGIFTw192kgAAneqZ0DDpKKM78Nh32jwfcuTVzJRe3xioECPZybiKHGIHGsbXg//Hu6PKSQ==
 
 cross-spawn@7.0.1:
   version "7.0.1"
@@ -5427,6 +5415,11 @@ ini@^1.3.5:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
   integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
+
+input-core@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/input-core/-/input-core-2.1.0.tgz#e414c90ca103e786ae8d946a013db92b2b67e1e8"
+  integrity sha512-Va2U9xDvLKWxtyqyKJqYjkgkY23C6Xfvb73coTCMEivsxhUjyWGln2esaP/zan5yMur0LzrJg9ac+22UxyVV4g==
 
 inquirer@7.0.4:
   version "7.0.4"
@@ -7670,6 +7663,13 @@ path-type@^4.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
+payment@^2.3.0, payment@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/payment/-/payment-2.4.0.tgz#e9d81de364fa919633bae71829808ac1236da9f8"
+  integrity sha512-FjVkqu1GW0epmWRuA7853cfEdjZx61z1vKagcvfvKWeXwEuUlOKr2nkdrCjue5qJWNSzj235pidaK3GsCbY84A==
+  dependencies:
+    qj "~2.0.0"
+
 pbkdf2@^3.0.3:
   version "3.0.17"
   resolved "https://registry.yarnpkg.com/pbkdf2/-/pbkdf2-3.0.17.tgz#976c206530617b14ebb32114239f7b09336e93a6"
@@ -8629,6 +8629,11 @@ q@^1.1.2:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
+qj@~2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/qj/-/qj-2.0.0.tgz#054dd3b75ce018728d23a0605f030dfda0bd158a"
+  integrity sha1-BU3Tt1zgGHKNI6BgXwMN/aC9FYo=
+
 qs@6.7.0:
   version "6.7.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
@@ -8711,6 +8716,13 @@ react-app-polyfill@^1.0.6:
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
 
+react-credit-cards@^0.8.3:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/react-credit-cards/-/react-credit-cards-0.8.3.tgz#608a8ee8bf3a88857fc83023ffba1ad536ba8c7e"
+  integrity sha512-88XJErkkdDjeFevOxfWYV2dUs4ddNNXJMIgutqTlUH2pYfcaDeFv9MXNGCcJKvBv4+6GEnxbCToymNRNbEt/uw==
+  dependencies:
+    payment "^2.3.0"
+
 react-dev-utils@^10.2.1:
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-10.2.1.tgz#f6de325ae25fa4d546d09df4bb1befdc6dd19c19"
@@ -8760,6 +8772,13 @@ react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-i
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-maskinput@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-maskinput/-/react-maskinput-3.2.0.tgz#0c56cd12c450645054da159d8908b014993e8156"
+  integrity sha512-4JHk1ylfZ3fMPvh50PZZLy9AjRIhQ9UHH/7CgMk+HkDKO1BpIM2/vJefOsKn0HA7hHxUe/Sf3DPkwIh9Hh7Ukg==
+  dependencies:
+    input-core "^2.1.0"
 
 react-router-dom@^5.2.0:
   version "5.2.0"

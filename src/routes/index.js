@@ -8,12 +8,12 @@ export const routes = [
     exact: true,
     component: lazy(() => import('./_Cart'))
   },
-  // {
-  //   id: "payment",
-  //   path: "/payment",
-  //   exact: true,
-  //   component: lazy(() => import('./_Payment'))
-  // },
+  {
+    id: "payment",
+    path: "/payment",
+    exact: true,
+    component: lazy(() => import('./_Payment'))
+  },
   // {
   //   id: "success",
   //   path: "/success",

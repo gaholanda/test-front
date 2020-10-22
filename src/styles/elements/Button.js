@@ -1,18 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const Button = styled.button`
+const Button = styled(Link)`
   display: block;
   margin: auto;
   width: 100%;
   max-width: 340px;
   padding: 20px 0;
-  background: ${({ disabled }) => disabled ? '#CCC' : '#FF6C00'};
-  box-shadow: ${
-    props =>
-    props.disabled ?
-    'inset 0 -3px 0 0 #CCC, 0 2px 4px 0 rgba(0,0,0,0.25)' :
-    'inset 0 -3px 0 0 #D45A00, 0 2px 4px 0 rgba(0,0,0,0.25)'
-  };
   border: none;
   border-radius: 3px;
   font-size: 20px;
@@ -24,8 +18,20 @@ const Button = styled.button`
   text-align: center;
   text-decoration: none;
 
+  ${({ disabled }) => disabled ?
+    css`
+      pointer-events: none;
+      background: #CCC;
+      box-shadow: inset 0 -3px 0 0 #CCC, 0 2px 4px 0 rgba(0,0,0,0.25)
+    ` :
+    css`
+      background: #FF6C00;
+      box-shadow: inset 0 -3px 0 0 #D45A00, 0 2px 4px 0 rgba(0,0,0,0.25);
+    `
+  }
+
   &:hover{
-    background: #D45A00;
+    background: ${({ disabled }) => disabled ? '#CCC' : '#D45A00'};
   }
 `;
 
