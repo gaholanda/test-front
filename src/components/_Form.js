@@ -21,37 +21,24 @@ function _Form({ setValidForm }) {
     }
   };
 
-  const handleChange = (target, name, format, validate) => {
+  const formatAndValidate = (target, name, format, validate) => {
 
-    if (name === "expiry") {
-      target.value = format(target.value);
-      if(!validate(target.value)){
-        setCard({ ...card, expiry: "invalid" })
-      } else {
-        setCard({ ...card, expiry: target.value })
+    if(target.value.trim() === ""){
+      setCard({ ...card, [name]: "empty" });
+    } else {
+
+      if(format){
+        target.value = format(target.value);
       }
-    }
 
-    if (name === "cvc") {
-      target.value = format(target.value);
-      if(target.value === ""){
-        setCard({ ...card, [name]: "empty" });
-      } else {
-        setCard({ ...card, [name]: target.value });
-      }
-    }
-
-    if (name === "number") {
-      target.value = format(target.value);
       setCard({ ...card, [name]: target.value });
-    }
 
-    if (name === "name") {
-      if(target.value === ""){
-        setCard({ ...card, [name]: "empty" });
-      } else {
-        setCard({ ...card, [name]: target.value });
+      if(validate){
+        if(!validate(target.value)){
+          setCard({ ...card, [name]: "invalid" });
+        }
       }
+
     }
 
     formIsValid();
@@ -60,6 +47,7 @@ function _Form({ setValidForm }) {
 
   const formIsValid = () => {
     const invalid = Object.keys(card).filter(key => card[key] === "invalid" || card[key] === "empty" || card[key] === "");
+    console.log(invalid);
     if(invalid.length === 0){
       setValidForm(card);
     } else {
@@ -78,7 +66,7 @@ function _Form({ setValidForm }) {
           placeholder="____.____.____.____"
           pattern="[\d| ]{16,22}"
           required
-          onChange={({ target }) => handleChange(target, target.name, formatCardNumber)}
+          onChange={({ target }) => formatAndValidate(target, target.name, formatCardNumber)}
           error={card.number === "invalid" ? true : false}
         />
         {card.number === "invalid" && <Error>Cartão inválido</Error>}
@@ -94,7 +82,7 @@ function _Form({ setValidForm }) {
           className="form-control"
           placeholder="Como no cartão"
           required
-          onChange={({ target }) => handleChange(target, target.name)}
+          onChange={({ target }) => formatAndValidate(target, target.name)}
         />
       </FormGroup>
       <FormGroup type="flex">
@@ -107,7 +95,7 @@ function _Form({ setValidForm }) {
             placeholder="__/__"
             pattern="\d\d/\d\d"
             required
-            onChange={({ target }) => handleChange(target, target.name, formatExpirationDate, validateExpirationDate)}
+            onChange={({ target }) => formatAndValidate(target, target.name, formatExpirationDate, validateExpirationDate)}
             maxLength={5}
             error={card.expiry === "invalid" ? true : false}
           />
@@ -122,7 +110,7 @@ function _Form({ setValidForm }) {
             placeholder="____"
             pattern="\d{3,4}"
             required
-            onChange={({ target }) => handleChange(target, target.name, formatCVC)}
+            onChange={({ target }) => formatAndValidate(target, target.name, formatCVC)}
             maxLength={4}
           />
         </FormGroup>
