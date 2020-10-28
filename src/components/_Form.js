@@ -65,6 +65,7 @@ function _Form({ setValidCard }) {
           required
           onKeyUp={({ target }) => formatAndValidate(target, target.name, formatCardNumber)}
           onKeyDown={formIsValid}
+          data-testid="credit-card"
           error={card.number === "invalid" ? true : false}
         />
         {card.number === "invalid" && <Error>Cartão inválido</Error>}
@@ -80,6 +81,7 @@ function _Form({ setValidCard }) {
           className="form-control"
           placeholder="Como no cartão"
           required
+          data-testid="name"
           onKeyUp={({ target }) => formatAndValidate(target, target.name)}
           onKeyDown={formIsValid}
         />
@@ -94,12 +96,12 @@ function _Form({ setValidCard }) {
             placeholder="__/____"
             pattern="\d\d/\d\d"
             required
+            data-testid="expiry"
             onKeyUp={({ target }) => formatAndValidate(target, target.name, formatExpirationDate, validateExpirationDate)}
             onKeyDown={formIsValid}
             maxLength={7}
             error={card.expiry === "invalid" ? true : false}
           />
-
           {card.expiry === "invalid" && <Error>Data inválida</Error>}
         </FormGroup>
         <FormGroup margin="auto auto auto 5px">
@@ -111,6 +113,7 @@ function _Form({ setValidCard }) {
             placeholder="____"
             pattern="\d{3,4}"
             required
+            data-testid="cvc"
             onKeyUp={({ target }) => formatAndValidate(target, target.name, formatCVC)}
             onKeyDown={formIsValid}
             maxLength={4}
