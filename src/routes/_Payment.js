@@ -6,7 +6,7 @@ import { GridItem, Container, Title, Button } from '../styles';
 
 function Payment({ purchase }) {
 
-  const [validForm, setValidForm] = useState(false);
+  const [validCard, setValidCard] = useState(false);
 
   return (
     <Fragment>
@@ -16,7 +16,7 @@ function Payment({ purchase }) {
         <GridItem area="details" padding={16} data-testid="payment-screen">
           <Container maxWidth={750} margin="auto 0 auto auto">
             <Title>Cartão de crédito</Title>
-            <Form setValidForm={setValidForm}  />
+            <Form setValidCard={setValidCard}  />
           </Container>
         </GridItem>
       }
@@ -25,7 +25,7 @@ function Payment({ purchase }) {
         <GridItem area="price" padding={16}>
           <Container maxWidth={340}>
             <Purchase info={purchase.info}/>
-            <Button disabled={!validForm} to={{ pathname: '/success', state: { cardInfo:  validForm} }}>Finalizar o pedido</Button>
+            <Button disabled={!validCard} to={{ pathname: '/success', state: { card:  validCard } }}>Finalizar o pedido</Button>
           </Container>
 
         </GridItem>

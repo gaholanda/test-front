@@ -6,6 +6,7 @@ const Grid = styled.div`
   grid-template-columns: 1fr;
   grid-template-areas:
     "tabs"
+    "message"
     "details"
     "price"
   ;
@@ -14,6 +15,7 @@ const Grid = styled.div`
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
       "tabs tabs"
+      "message message"
       "details price"
     ;
   }

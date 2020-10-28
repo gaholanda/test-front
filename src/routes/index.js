@@ -14,12 +14,12 @@ export const routes = [
     exact: true,
     component: lazy(() => import('./_Payment'))
   },
-  // {
-  //   id: "success",
-  //   path: "/success",
-  //   exact: true,
-  //   component: lazy(() => import('./_Success'))
-  // }
+  {
+    id: "success",
+    path: "/success",
+    exact: true,
+    component: lazy(() => import('./_Success'))
+  }
 ]
 
 export default routes;

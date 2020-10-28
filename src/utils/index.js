@@ -43,7 +43,7 @@ export const formatCVC = (number, prevNumber, allNumbers = {}) => {
 export const formatExpirationDate = (date) => {
   const dateCleared = clearNumber(date);
   if(dateCleared.length >= 3){
-    return `${dateCleared.slice(0, 2)}/${dateCleared.slice(2, 6)}`;
+    return `${dateCleared.slice(0, 2)}/${dateCleared.slice(2, 8)}`;
   }
 
   return dateCleared;
@@ -52,7 +52,7 @@ export const formatExpirationDate = (date) => {
 
 export const validateExpirationDate = (value) => {
   const date = value.split('/');
-  if(parseInt(date[0]) >= 1 && parseInt(date[0]) <= 12 && parseInt(date[1]) >= 20){
+  if(parseInt(date[0]) >= 1 && parseInt(date[0]) <= 12 && parseInt(date[1]) > 2020){
     return true;
   }
   return false;
