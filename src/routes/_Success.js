@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { withRouter, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 import { Purchase, Products } from "../components";
 import {
@@ -12,13 +12,13 @@ import {
   CardInfo,
 } from "../styles";
 
-function Success({ purchase, location }) {
-  const { card } = location.state;
+function Success({ purchase }) {
+  const { card, products, info } = purchase;
 
   return (
     <Fragment>
-      {!purchase.products && <Redirect to="/" />}
-      {purchase.products && (
+      {!products && <Redirect to="/" />}
+      {products && (
         <Fragment>
           <GridItem area="message" padding={16}>
             <Image
@@ -50,12 +50,12 @@ function Success({ purchase, location }) {
                 </Box>
               )}
               <Title>Produtos</Title>
-              <Products items={purchase.products} />
+              <Products items={products} />
             </Container>
           </GridItem>
           <GridItem area="price" padding={16}>
             <Container maxWidth={340}>
-              <Purchase info={purchase.info} />
+              <Purchase info={info} />
             </Container>
           </GridItem>
         </Fragment>
@@ -64,4 +64,4 @@ function Success({ purchase, location }) {
   );
 }
 
-export default withRouter(Success);
+export default Success;
