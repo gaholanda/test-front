@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 const Button = styled(Link)`
   display: block;
@@ -18,20 +18,20 @@ const Button = styled(Link)`
   text-align: center;
   text-decoration: none;
 
-  ${({ disabled }) => disabled ?
-    css`
-      pointer-events: none;
-      background: #CCC;
-      box-shadow: inset 0 -3px 0 0 #CCC, 0 2px 4px 0 rgba(0,0,0,0.25)
-    ` :
-    css`
-      background: #FF6C00;
-      box-shadow: inset 0 -3px 0 0 #D45A00, 0 2px 4px 0 rgba(0,0,0,0.25);
-    `
-  }
+  ${({ disabled }) =>
+    disabled
+      ? css`
+          pointer-events: none;
+          background: #ccc;
+          box-shadow: inset 0 -3px 0 0 #ccc, 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+        `
+      : css`
+          background: #ff6c00;
+          box-shadow: inset 0 -3px 0 0 #d45a00, 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+        `}
 
-  &:hover{
-    background: ${({ disabled }) => disabled ? '#CCC' : '#D45A00'};
+  &:hover {
+    background: ${({ disabled }) => (disabled ? "#CCC" : "#D45A00")};
   }
 `;
 

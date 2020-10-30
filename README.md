@@ -12,7 +12,6 @@ Fork do repositório [belezanaweb/test-front](https://github.com/belezanaweb/tes
 - [Nock](https://github.com/nock/nock)
 - [Express](https://github.com/expressjs/express)
 
-
 ### Rodando os testes
 
 Faça:
@@ -21,7 +20,7 @@ Faça:
 npm test
 ```
 
-Se tiver o *yarn* instalado, faça:
+Se tiver o _yarn_ instalado, faça:
 
 ```
 yarn test
@@ -37,21 +36,24 @@ npm build
 npm serve
 ```
 
-Se tiver o *yarn* instalado, faça:
+Se tiver o _yarn_ instalado, faça:
 
 ```
 yarn
 yarn build
 yarn serve
 ```
+
 ### Épicos e tarefas do projeto (Versão 2)
 
 - **BNW6 - Layout com CSS Grid**
+
   - Rota /cart
   - Rota /payment
   - Rota /success
 
 - **BNW7 - Formulário**
+
   - Nova validação dos campos
 
 - **BNW8 - Ajustar os testes**

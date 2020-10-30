@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Box, ListCSS } from '../styles';
-import { Currency } from '../components';
+import { Box, ListCSS } from "../styles";
+import { Currency } from "../components";
 
 function Purchase({ info }) {
   const { List, ListItem, ItemDescription, ItemPrice } = ListCSS;
@@ -10,19 +10,27 @@ function Purchase({ info }) {
       <List>
         <ListItem>
           <ItemDescription>PRODUTOS</ItemDescription>
-          <ItemPrice><Currency value={info.subTotal}/></ItemPrice>
+          <ItemPrice>
+            <Currency value={info.subTotal} />
+          </ItemPrice>
         </ListItem>
         <ListItem>
           <ItemDescription>FRETE</ItemDescription>
-          <ItemPrice><Currency value={info.shippingTotal} /></ItemPrice>
+          <ItemPrice>
+            <Currency value={info.shippingTotal} />
+          </ItemPrice>
         </ListItem>
         <ListItem fontColor="#FF7800">
           <ItemDescription>DESCONTO</ItemDescription>
-          <ItemPrice>- <Currency value={info.discount}/></ItemPrice>
+          <ItemPrice>
+            - <Currency value={info.discount} />
+          </ItemPrice>
         </ListItem>
         <ListItem>
           <ItemDescription>TOTAL</ItemDescription>
-          <ItemPrice><Currency value={info.total} /></ItemPrice>
+          <ItemPrice>
+            <Currency value={info.total} />
+          </ItemPrice>
         </ListItem>
       </List>
     </Box>

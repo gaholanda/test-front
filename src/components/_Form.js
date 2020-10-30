@@ -6,12 +6,18 @@ import {
   formatCardNumber,
   formatCVC,
   formatExpirationDate,
-  validateExpirationDate
+  validateExpirationDate,
 } from "../utils";
 
 function _Form({ setValidCard }) {
   const { FormGroup, Label, Input, Error } = FormCSS;
-  const [card, setCard] = useState({ number: "", name: "", expiry: "", cvc: "", issuer: ""});
+  const [card, setCard] = useState({
+    number: "",
+    name: "",
+    expiry: "",
+    cvc: "",
+    issuer: "",
+  });
 
   const validateCardNumber = ({ issuer }, isValid) => {
     if (isValid) {
@@ -22,35 +28,34 @@ function _Form({ setValidCard }) {
   };
 
   const formatAndValidate = (target, name, format, validate) => {
-
-    if(target.value.trim() === ""){
+    if (target.value.trim() === "") {
       setCard({ ...card, [name]: "empty" });
     } else {
-
-      if(format){
+      if (format) {
         target.value = format(target.value);
       }
 
       setCard({ ...card, [name]: target.value });
 
-      if(validate){
-        if(!validate(target.value)){
+      if (validate) {
+        if (!validate(target.value)) {
           setCard({ ...card, [name]: "invalid" });
         }
       }
-
     }
-
-  }
+  };
 
   const formIsValid = () => {
-    const invalid = Object.keys(card).filter(key => card[key] === "invalid" || card[key] === "empty" || card[key] === "");
-    if(invalid.length === 0){
+    const invalid = Object.keys(card).filter(
+      (key) =>
+        card[key] === "invalid" || card[key] === "empty" || card[key] === ""
+    );
+    if (invalid.length === 0) {
       setValidCard(card);
     } else {
       setValidCard(false);
     }
-  }
+  };
 
   return (
     <Box type="solid">
@@ -63,14 +68,22 @@ function _Form({ setValidCard }) {
           placeholder="____.____.____.____"
           pattern="[\d| ]{16,22}"
           required
-          onKeyUp={({ target }) => formatAndValidate(target, target.name, formatCardNumber)}
+          onKeyUp={({ target }) =>
+            formatAndValidate(target, target.name, formatCardNumber)
+          }
           onKeyDown={formIsValid}
           data-testid="credit-card"
           error={card.number === "invalid" ? true : false}
         />
         {card.number === "invalid" && <Error>Cartão inválido</Error>}
-        <div style={{ display: 'none' }}>
-          <Card number={card.number} name={card.name} expiry={card.expiry} cvc={card.cvc} callback={validateCardNumber} />
+        <div style={{ display: "none" }}>
+          <Card
+            number={card.number}
+            name={card.name}
+            expiry={card.expiry}
+            cvc={card.cvc}
+            callback={validateCardNumber}
+          />
         </div>
       </FormGroup>
       <FormGroup>
@@ -97,7 +110,14 @@ function _Form({ setValidCard }) {
             pattern="\d\d/\d\d"
             required
             data-testid="expiry"
-            onKeyUp={({ target }) => formatAndValidate(target, target.name, formatExpirationDate, validateExpirationDate)}
+            onKeyUp={({ target }) =>
+              formatAndValidate(
+                target,
+                target.name,
+                formatExpirationDate,
+                validateExpirationDate
+              )
+            }
             onKeyDown={formIsValid}
             maxLength={7}
             error={card.expiry === "invalid" ? true : false}
@@ -114,7 +134,9 @@ function _Form({ setValidCard }) {
             pattern="\d{3,4}"
             required
             data-testid="cvc"
-            onKeyUp={({ target }) => formatAndValidate(target, target.name, formatCVC)}
+            onKeyUp={({ target }) =>
+              formatAndValidate(target, target.name, formatCVC)
+            }
             onKeyDown={formIsValid}
             maxLength={4}
           />

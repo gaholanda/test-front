@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Grid = styled.div`
   display: grid;
@@ -8,16 +8,14 @@ const Grid = styled.div`
     "tabs"
     "message"
     "details"
-    "price"
-  ;
+    "price";
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
       "tabs tabs"
       "message message"
-      "details price"
-    ;
+      "details price";
   }
 `;
 
