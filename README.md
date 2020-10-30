@@ -6,7 +6,9 @@ Fork do repositório [belezanaweb/test-front](https://github.com/belezanaweb/tes
 
 - [Create React App](https://github.com/facebook/create-react-app)
 - [React Router Dom](https://reactrouter.com/web/guides/quick-start)
-- [React Credit Cards](https://github.com/amarofashion/react-credit-cards)
+- [React Hook Form](https://react-hook-form.com/)
+- [Payment](https://github.com/jessepollak/payment#readme)
+- [Yup](https://github.com/jquense/yup)
 - [axios](https://github.com/axios/axios)
 - [Styled Components](https://github.com/styled-components/styled-components)
 - [Nock](https://github.com/nock/nock)
@@ -43,6 +45,12 @@ yarn
 yarn build
 yarn serve
 ```
+
+### Versão 3
+
+  - Utilização de commits semânticos
+  - Instalação do React Hook Form e Yup
+  - Alteração do formulário e da sua validação
 
 ### Épicos e tarefas do projeto (Versão 2)
 
