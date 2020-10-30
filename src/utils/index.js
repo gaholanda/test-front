@@ -14,16 +14,11 @@ const ValidationSchema = yup.object().shape({
   cvc: yup
     .string()
     .test("cvc", "", (value) => Payment.fns.validateCardCVC(value))
-    .required()
+    .required(),
 });
 
 const FormatCardNumber = (field) => Payment.formatCardNumber(field);
 const FormatCardExpiry = (field) => Payment.formatCardExpiry(field);
-const FormatCardCVC    = (field) => Payment.formatCardCVC(field);
+const FormatCardCVC = (field) => Payment.formatCardCVC(field);
 
-export {
-  ValidationSchema,
-  FormatCardCVC,
-  FormatCardNumber,
-  FormatCardExpiry
-}
+export { ValidationSchema, FormatCardCVC, FormatCardNumber, FormatCardExpiry };

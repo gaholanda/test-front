@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Redirect, useHistory } from "react-router-dom";
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { Purchase, Form } from "../components";
@@ -12,13 +12,13 @@ function Payment({ purchase }) {
   const history = useHistory();
 
   const { register, handleSubmit, errors } = useForm({
-    resolver: yupResolver(ValidationSchema)
+    resolver: yupResolver(ValidationSchema),
   });
 
-  const onSubmit = (data) =>{
+  const onSubmit = (data) => {
     purchase.card = data;
     history.push("/success");
-  }
+  };
 
   return (
     <Fragment>
@@ -35,10 +35,7 @@ function Payment({ purchase }) {
         <GridItem area="price" padding={16}>
           <Container maxWidth={340}>
             <Purchase info={purchase.info} />
-            <Button
-              onClick={handleSubmit(onSubmit)}
-              to="/success"
-            >
+            <Button onClick={handleSubmit(onSubmit)} to="/success">
               Finalizar o pedido
             </Button>
           </Container>

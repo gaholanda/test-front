@@ -1,14 +1,9 @@
 import React from "react";
 
 import { Box, FormCSS } from "../styles";
-import {
-  FormatCardCVC,
-  FormatCardExpiry,
-  FormatCardNumber
-} from "../utils";
+import { FormatCardCVC, FormatCardExpiry, FormatCardNumber } from "../utils";
 
 function _Form({ register, errors }) {
-
   const { FormGroup, Label, Input, Error } = FormCSS;
 
   return (

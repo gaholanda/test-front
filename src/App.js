@@ -19,7 +19,7 @@ function App(props) {
           shippingTotal: data.shippingTotal,
           discount: data.discount,
           total: data.total,
-        }
+        },
       })
     );
     return () => {

@@ -48,9 +48,9 @@ yarn serve
 
 ### Versão 3
 
-  - Utilização de commits semânticos
-  - Instalação do React Hook Form e Yup
-  - Alteração do formulário e da sua validação
+- Utilização de commits semânticos
+- Instalação do React Hook Form e Yup
+- Alteração do formulário e da sua validação
 
 ### Épicos e tarefas do projeto (Versão 2)
 
