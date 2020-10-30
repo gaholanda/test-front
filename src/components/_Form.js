@@ -11,10 +11,6 @@ function _Form({ register, errors }) {
 
   const { FormGroup, Label, Input, Error } = FormCSS;
 
-  const handleChange = (format, target) => {
-    format(target);
-  }
-
   return (
     <Box type="solid">
       <form>
@@ -26,7 +22,7 @@ function _Form({ register, errors }) {
             ref={register}
             error={errors.number ? true : false}
             placeholder="____.____.____.____"
-            onChange={({ target }) => handleChange(FormatCardNumber, target)}
+            onChange={({ target }) => FormatCardNumber(target)}
           />
           {errors.number && <Error>Cartão inválido</Error>}
         </FormGroup>
@@ -50,7 +46,7 @@ function _Form({ register, errors }) {
               ref={register}
               placeholder="__/____"
               error={errors.expiry ? true : false}
-              onChange={({ target }) => handleChange(FormatCardExpiry, target)}
+              onChange={({ target }) => FormatCardExpiry(target)}
             />
             {errors.expiry && <Error>Data inválida</Error>}
           </FormGroup>
@@ -61,7 +57,7 @@ function _Form({ register, errors }) {
               name="cvc"
               ref={register}
               error={errors.cvc ? true : false}
-              onChange={({ target }) => handleChange(FormatCardCVC, target)}
+              onChange={({ target }) => FormatCardCVC(target)}
             />
             {errors.cvc && <Error>CVV Inválido</Error>}
           </FormGroup>
