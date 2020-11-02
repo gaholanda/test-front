@@ -11,7 +11,7 @@ Fork do repositório [belezanaweb/test-front](https://github.com/belezanaweb/tes
 - [Yup](https://github.com/jquense/yup)
 - [axios](https://github.com/axios/axios)
 - [Styled Components](https://github.com/styled-components/styled-components)
-- [Nock](https://github.com/nock/nock)
+- [Jest](https://jestjs.io/)
 - [Express](https://github.com/expressjs/express)
 
 ### Rodando os testes
