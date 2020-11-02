@@ -4,12 +4,8 @@
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^1.0.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "axios": "^0.20.0",
     "express": "^4.17.1",
-    "nock": "^13.0.4",
     "payment": "^2.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -23,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "serve": "node server/index.js"
   },
@@ -43,6 +39,15 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "babel-jest": "^26.6.2",
+    "jest": "^26.6.2",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
     "prettier": "2.1.2"
   }
 }

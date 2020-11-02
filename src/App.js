@@ -28,7 +28,7 @@ function App(props) {
   }, []);
 
   return (
-    <Grid>
+    <Grid data-testid="app">
       <Tabs />
       <Suspense fallback={<Loading />}>
         <Switch>
