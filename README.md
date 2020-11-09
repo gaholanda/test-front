@@ -1,4 +1,4 @@
-## Frontend Test
+## Checkout (em atualização)
 
 Fork do repositório [belezanaweb/test-front](https://github.com/belezanaweb/test-front).
 
