@@ -14,10 +14,11 @@ Fork do repositório [belezanaweb/test-front](https://github.com/belezanaweb/tes
 - [Styled Components](https://github.com/styled-components/styled-components)
 - [Jest](https://jestjs.io/)
 - [Express](https://github.com/expressjs/express)
+- [Cypress](https://github.com/cypress-io/cypress)
 
 ### Rodando os testes
 
-Faça:
+- Para os testes unitários e de integração:
 
 ```
 npm test
@@ -28,6 +29,13 @@ Se tiver o _yarn_ instalado, faça:
 ```
 yarn test
 ```
+
+- Para o teste de ponta a ponta, faça:
+
+```
+yarn cypress
+```
+
 
 ### Rodando o projeto
 

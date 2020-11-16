@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
-    "serve": "node server/index.js"
+    "serve": "node server/index.js",
+    "cypress": "./node_modules/.bin/cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,6 +46,7 @@
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "cypress": "^5.6.0",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "prettier": "2.1.2"
   }
