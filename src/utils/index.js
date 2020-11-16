@@ -7,7 +7,9 @@ const ValidationSchema = yup.object().shape({
     .string()
     .test("number", "", (value) => Payment.fns.validateCardNumber(value))
     .required(),
-  name: yup.string().required(),
+  name: yup
+    .string()
+    .required(),
   expiry: yup
     .string()
     .test("expiry", "", (value) => Payment.fns.validateCardExpiry(value))
