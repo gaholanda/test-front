@@ -8,6 +8,7 @@ Fork do repositório [belezanaweb/test-front](https://github.com/belezanaweb/tes
 - [React Router Dom](https://reactrouter.com/web/guides/quick-start)
 - [React Hook Form](https://react-hook-form.com/)
 - [Payment](https://github.com/jessepollak/payment#readme)
+- [currency.js](https://currency.js.org/)
 - [Yup](https://github.com/jquense/yup)
 - [axios](https://github.com/axios/axios)
 - [Styled Components](https://github.com/styled-components/styled-components)
@@ -46,7 +47,7 @@ yarn build
 yarn serve
 ```
 
-### Versão 3
+### Épicos e tarefas do projeto (Versão 3)
 
 - Utilização de commits semânticos
 - Instalação do React Hook Form e Yup

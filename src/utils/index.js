@@ -1,5 +1,6 @@
 import Payment from "payment";
 import * as yup from "yup";
+import currency from 'currency.js';
 
 const ValidationSchema = yup.object().shape({
   number: yup
@@ -17,8 +18,9 @@ const ValidationSchema = yup.object().shape({
     .required(),
 });
 
-const FormatCardNumber = (field) => Payment.formatCardNumber(field);
-const FormatCardExpiry = (field) => Payment.formatCardExpiry(field);
-const FormatCardCVC = (field) => Payment.formatCardCVC(field);
+const FormatCardNumber = (field)  => Payment.formatCardNumber(field);
+const FormatCardExpiry = (field)  => Payment.formatCardExpiry(field);
+const FormatCardCVC    = (field)  => Payment.formatCardCVC(field);
+const FormatCurrency   = (value)  => currency(value, { symbol: "R$ ", separator: ".", decimal: "," }).format();
 
-export { ValidationSchema, FormatCardCVC, FormatCardNumber, FormatCardExpiry };
+export { ValidationSchema, FormatCardCVC, FormatCardNumber, FormatCardExpiry, FormatCurrency };

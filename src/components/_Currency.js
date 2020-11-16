@@ -1,11 +1,10 @@
 import React from "react";
 
+import { FormatCurrency } from '../utils';
+
 function Currency({ value }) {
-  return (
-    <span>
-      {value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
-    </span>
-  );
+  const money = FormatCurrency(value);
+  return <span data-testid="currency">{money}</span>;
 }
 
 export default Currency;
